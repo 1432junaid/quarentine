@@ -119,13 +119,13 @@ the number of ways decoding "12" is 2.
 
 #task011x1:
 
-given a string S and a string T, count the number of distinct sybsequrnce of T in S.
-A subsequence of a strinf is a new string which is formed from the original string by deletinf some (an be none) of the 
+given a string S and a string T, count the number of distinct subsequences of T in S.
+A subsequence of a string is a new string which is formed from the original string by deletinf some (an be none) of the 
 characters without disturbing the relative position of the remaining characters.(ie,"ACE" is a subsequence of "ABCDE"
 while "AEC" is not).
 
 Here is an example:
-S = "rabbit", T = "rabbit"
+S = "rabbbit", T = "rabbit"
 Return 3.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
@@ -135,3 +135,64 @@ Return 3.
 Divide two integers without using  these "*", "/", "%" operators.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
+#task012x1:
+
+Evaluate the value of an arithmetic expression in Reverse polish notation.
+Valid operator are +,-,*,/. Each operand may be an interger or another expression.
+Some examples:
+["2","1","+","3","*"] -> ((2+1)*3) -> 9
+["4","13","5","/","+"] -> (4+(13/5)) -> 6
+
+{Thoughts}
+
+	usually , stack is the best match got solving reverse polish notation.
+	for this question, we need to introduce a sack here and process the expression one character by one.
+
+	if current char is a number ,push it into stack
+	if current char is an operator, pop two elements out. calculate the result and push back to stack.
+
+	and in thr end, the left number in the stack is the result.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+#task012x2:
+
+Given an unsorted integer array, find the first missing positive integer.
+for example:
+Given [1,2,0] return 3,
+and  [3,4,-1,1] return 2.
+
+your algorithm should run O(n) times and uses constant space.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+#task013x1:
+
+There are N gas stations along a circular rout, where the amount of gas at station i is gas[i].
+you have a car with an unlimited gas tank and it cost cost[i] of gas to travel from station i to its next station (i+1).
+you begin athe journey with an empty tank at one of he gas stations.
+Return the starting gas station's index if you can travel around the circuit once, otherwise return -1.
+
+Note:
+	the solution is guaranteed to be unique.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+#task013x2:
+
+The gray code is a binary numeral system where two successive values differ in only one bit.
+Given a non-negative integet n representing the total number of bits in the code, print the sequence of gray code.
+A gray code sequence must begin with 0.
+
+For example:
+	given n =2 ,return [0,1,3,2] . its gray code sequence is :
+	00 -0 
+	01 -1
+	11 -3
+	10 -2
+
+Note:
+
+	for a given n, a gray code sequence is not unique defined. 
+	for example:
+		[0,2,3,1] is also a valid gray code sequence according to the above definition.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
