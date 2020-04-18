@@ -179,7 +179,7 @@ Note:
 #task013x2:
 
 The gray code is a binary numeral system where two successive values differ in only one bit.
-Given a non-negative integet n representing the total number of bits in the code, print the sequence of gray code.
+Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code.
 A gray code sequence must begin with 0.
 
 For example:
@@ -195,4 +195,61 @@ Note:
 	for example:
 		[0,2,3,1] is also a valid gray code sequence according to the above definition.
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+#task014x1:
+
+Given two words word1 and word2, find the minimum number of steps required to convert word1 to word2.
+(each operation is counted as 1 step).
+You have the following 3 operations permited on a word:
+a) Insert a character
+b) Delete a character
+c) Replace a character
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#task014x2:
+
+Given  n pair of parentheses, write a function to generate all combination of well formed parentheses.
+for example: 
+	given n =3,a solution set is;
+	"((()))","(()())","()(())","()()()"
+
 ----------------------------------------------------------------------------------------------------------------------------------------------
+#task015x1:
+
+Given an integer, convert it to a toman numeral. Input is guaranteed to be within the range from 1  to 3999.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+#task015x2:
+
+Given s1,s2,s3, find whether s3 is formed by the interleaving of s1 and s2.
+
+for example:
+	given:
+	s1 = "aabcc";
+	s2 = "dbbca";
+	 when s3 = "aadbbcbcac"; return TRUE.
+	 when s3 = "aadbbbaccc"; return FALSE.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#task016x1:
+
+Given an array of non-negative integers,you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Determine if you are able to reach the last index.
+
+for example:
+	A = [2,3,1,1,4], return true.
+	A = [3,2,1,0,4], return false.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+#task016x2:
+
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump lenght at that position. your goal is to reach the last index in the 
+minimum number of jumps. 
+
+for example:
+	A = [2,3,1,1,4]
+	the minimum number of jumps to reach the last index is 2.
+	(Jump 1 step from index 0 to 1, then 3 steps to the last index.)
+------------------------------------------------------------------------------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 #include<string>
 #include<algorithm>
 using namespace std;
-
+/*
 int count_sub_seq(string &str1, string &str2){
 	int len1 = str1.length();
 	int len2 = str2.length();
@@ -30,4 +30,20 @@ int main(){
 //	cout<<len2<<endl
 	cout<<count_sub_seq(str1,str2);
 	return 0;
+}*/
+
+int main(){
+	string str1;
+	cin>>str1;
+	string str2;
+	cin>>str2;
+	cout<<count_subseq(str1,str2)<<endl;
+	return 0;
 }
+
+int count_subseq(string str1,string str2){
+	int len1 = str1.length();
+	int len2 = str2.length();
+	int val[len1][len2];
+	for(int i =1 ;i<len1;i++)val[i][0] = 0;
+	for(int i = 0;i<len2;i++)val[1][i] = 1;
