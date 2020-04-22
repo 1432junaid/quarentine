@@ -10,15 +10,16 @@ struct node *create_linked_list();
 int traverse(struct node*);
 void do_loop(struct  node*);
 int check_loop(struct node*);
-
+struct node * check_loop_at(struct node*);
 int main(){
-	int opt,size,check1,c;
-	struct node *head = NULL;
+	int opt,size,check1,c,count;
+	struct node *head = NULL,*temp;
 	while(1){
 		cout<<"1:create"<<endl;
 		cout<<"3:traverse"<<endl;
 		cout<<"4:do loop"<<endl;
 		cout<<"5:check loop"<<endl;
+		cout<<"6:chect loop at "<<endl;
 		cout<<"9:Exit"<<endl;
 		cin>>opt;
 	switch(opt){
@@ -36,12 +37,19 @@ int main(){
 			break;
 			case 5:
 				c = check_loop(head);
-				if(c == 1){cout<<"loop found at :"<<endl;}
-				if(c != 1){cout<<"no loop found"<<endl;}
+				if(c == 1){cout<<"loop found !"<<endl<<endl;}
+				if(c != 1){cout<<"no loop found"<<endl<<endl;}
+			break;
+			case 6:
+				temp = check_loop_at(head);
+				cout<<"loop founnd at :"<< temp->data <<endl;
 			break;
 			case 9:
 				cout<<"Exit"<<endl;
 				return 0;
+			break;
+			default:
+				cout<<"worrong choice"<<endl;
 		}
 	}
 	return 0;
@@ -103,5 +111,27 @@ int check_loop(struct node *head){
 	}
 	return 0;
 }
+
+
+struct node *check_loop_at(struct node *head){
+	struct node * p,*q;
+	int count = 1;
+	p = head;
+	q = head;
+	while( (p->next != NULL) && (q->next != NULL) ){
+		p = p->next;
+		q = q->next;
+		if(q != NULL)q = q->next;
+		if(p == q)break;
+	}
+	if(q == NULL)return NULL;
+	p = head;
+	while(p != q){
+		p = p->next;
+		q = q->next;
+	}
+	return q;
+}
+
 
 
