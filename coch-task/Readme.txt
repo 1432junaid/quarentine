@@ -263,3 +263,19 @@ find whether a linked list have cycle or not.
 fine at which node of linked list have cycle.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+#task018x1:
+
+Given teo sorted interger arrays A and B, merge B into A as one sorted array.
+
+Note:
+You may assume that A has enough space to hold additional elements from B. The number of elements iinitialized 
+in A and B are m and n respectively.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+#task018x2:
+
+Merge two sorted linked list and return it as a new list . The new list should be made by splicing together the nodes
+of the first two lists.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
