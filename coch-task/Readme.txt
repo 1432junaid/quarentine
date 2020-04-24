@@ -265,17 +265,42 @@ fine at which node of linked list have cycle.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 #task018x1:
 
-Given teo sorted interger arrays A and B, merge B into A as one sorted array.
+Given two sorted interger arrays A and B, merge B into A as one sorted array.
 
 Note:
 You may assume that A has enough space to hold additional elements from B. The number of elements iinitialized 
 in A and B are m and n respectively.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-
 #task018x2:
 
 Merge two sorted linked list and return it as a new list . The new list should be made by splicing together the nodes
 of the first two lists.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
+#task019x1:
+
+Implement next permutation, which rearranges into the lexicographically next greater permutation of numbers.
+if such arrangement is not possible, it must rearrange it as the lowest possible order(ie, sorted in ascending order).
+The replacement must be in-place, do not allocate extra memory.
+Here are some examples. inputs are the left-hand column and its corresponding outputs are in the right-hand column.
+1,2,3 -> 1,3,2
+3,2,1 -> 1,2,3
+1,1,5 -> 1,5,1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#task019x2:
+
+Given a collection of numbers, return all possible permutations.
+
+for example:
+
+[1,2,3] have the following permutations:
+[1,2,3]
+[1,3,2]
+[2,1,3]
+[2,3,1]
+[3,1,2]
+[3,2,1]
+
+----------------------------------------------------------------------------------------------------------------------------------------------
