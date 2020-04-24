@@ -2,10 +2,12 @@
 #include<cstdio>
 #include<cmath>
 #include<vector>
+#include<algorithm>
 
 using namespace std;
 void printer(int *,int);
-vector<int> *permu(int *,int);
+vector<int> permu(int *,int);
+int next_permu(vector<int> ,int);
 void swap(int*,int*);
 int sum_arr(int *,int);
 
@@ -14,30 +16,32 @@ int main(){
 	int len = sizeof(a)/sizeof(a[0]);
 	int result = sum_arr(a,len);
 	printf("%d\n",result);
-	vector<int >v1;
+	vector<int > v1;
 	v1 = permu(a,len);
-//	permu(a,len);
-//	printf("%d\n",sum_arr(a,len) );
-//	result = pow(10,3);
-//	result = sum_arr(a,len);
-//	printf("%d\n",result);
+	vector<int >::iterator itr1 = v1.begin();
+	vector<int >::iterator itr2 = v1.end();
+	sort(itr1,itr2);
+	int next = next_permu(v1,result);
+	cout<<next<<endl;
 	return 0;
 
 }
 
-vector<int> *permu(int a[],int len){
+vector<int> permu(int a[],int len){
 	vector<int>v1;
+	int result;
 	for(int i; i<len ;i++){
 		for(int j = 1;j <= len; j++){
 			for(i = 0; i< len-1; i++){
 				swap(&a[i], &a[i+1]);
 				printer(a,len);
-				v1.push_back(sum_arr(a,len));
+				result = sum_arr(a,len);
+				cout<< result<<endl;
+				v1.push_back(result);
 			}
 		}
 	}
-	vector<int>::iterator itr = v1.begin();
-	return itr;
+	return v1;
 }
 
 void printer(int a[],int len){
@@ -65,3 +69,13 @@ int sum_arr(int a[],int len){
 }
 
 
+int next_permu(vector<int> &v1,int target){
+	vector<int>::iterator itr1 = v1.begin();
+	vector<int>::iterator min = v1.begin();
+	vector<int>::iterator itr2 = v1.end();
+	while(itr1 != itr2){
+		if(*itr1 == target)return *(itr1+1);
+		if(target == *itr2)return *min;
+		itr1++;
+	}
+}
