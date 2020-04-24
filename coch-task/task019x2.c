@@ -1,5 +1,6 @@
-#include<stdio.h>
-#include<math.h>
+#include<iostream>
+#include<cstdio.h>
+#include<cmath.h>
 void printer(int *,int);
 void permu(int *,int);
 void swap(int*,int*);
@@ -8,10 +9,9 @@ int sum_arr(int *,int);
 int main(){
 	int a[] = {1,2,3};
 	int len = sizeof(a)/sizeof(a[0]);
-//	printer(a,len);
-	int result;
-//	printf("\n");
-	permu(a,len);
+	int result = sum_arr(a,len);
+	printf("%d\n",result);
+//	permu(a,len);
 //	printf("%d\n",sum_arr(a,len) );
 //	result = pow(10,3);
 //	result = sum_arr(a,len);
@@ -21,11 +21,13 @@ int main(){
 }
 
 void permu(int a[],int len){
+	vector<int>v1;
 	for(int i; i<len ;i++){
 		for(int j = 1;j <= len; j++){
 			for(i = 0; i< len-1; i++){
 				swap(&a[i], &a[i+1]);
-				printer(a,len);
+			//	printer(a,len);
+				sum_arr(a,len);
 			}
 		}
 	}
