@@ -304,3 +304,42 @@ for example:
 [3,2,1]
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
+#task020x1:
+
+Given a string s consists of upper/lower-case alphabets and empty space characters ' ',return the lenght of last 
+word in the string.
+if the last word does not exist, return 0;
+
+Note: A word is defined as a character sequence consists of non-space characters only.
+for example,
+
+Given s = "Hello World",
+return five.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#task020x2:
+
+Given a digit string, return all possible letter combinations that the number could represent.
+A mapping of digit to letters (just like on the telephone buttons) ,
+
+Input : Digit string "23"
+Output :["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
+Note :
+
+Although the above answer is in lexicographical order, you answer could be in any order you want.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
