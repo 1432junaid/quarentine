@@ -15,6 +15,8 @@ void add_day(date& d, int n);			//add n day to d
 
 int main(){
 	struct date my_birthday;
+	return 0;
+}
 	void f(){
 		struct date today;
 		today.init(16,10,1996);
@@ -22,7 +24,7 @@ int main(){
 		date tommorow = today;
 		tommorow.add_day(1);
 	}
-	return 0;
-}
+//	return 0;
+//}
 
 
