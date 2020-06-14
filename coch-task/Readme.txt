@@ -330,8 +330,29 @@ Note :
 Although the above answer is in lexicographical order, you answer could be in any order you want.
 
 -------------------------------------------------------------------------------------------------------------------------------------------
+#task021:
 
+Given an unsorted array of integers, find the lenght of the longest consecutive elements sequence.
 
+for example,
+
+Given [100,4,200,1,3,2],
+the longest consecutive elements sequence id [1,2,3,4];
+Return its length 4.
+
+Note: your algorithm should run on O(n) complexity.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+box_prblm:
+
+	this is question of operator overloading in which we overload to operators 
+	1.	<	[this operator check used between the two classes]
+	2.	<<	[cout<<object,this operator will print all the paramerters of that class ]
+
+note: 
+	https://www.hackerrank.com/chalanges/box_it/problem
+
+------------------------------------------------------------------------------------------------------------------------------------------ 
 
 
 

@@ -1,0 +1,8 @@
+
+Inheritance:
+	--there must be atleast 2 classes.,
+		1. Base class(Parent class)
+		2. Derived class(child class)
+	--if derived class inherits base class, it means we can access all the accessible 
+	--properties of base calss through object of Derived class.
+	--properties
