@@ -1,0 +1,40 @@
+Exception:
+	is an undesirable situation while process is running
+	if it has not been handled, process will terminate.
+
+my words:
+	a exception genrates when we are right but somehow there is a barrior in the compiler or 
+	even compiler donn't know about that ,then we have to think and try another approach to 
+	rid over it that is called the exception was generate and we handled.
+	Ex :
+		we r going to lko to kanpur but for some reasons there is a barrier 
+		and we take back and try diferent way in order to reach kanpur.
+
+Three keywords to handle Exception:
+	1. try[used to define a block]
+	2. catch[used to define a block]
+	3. throw[used to throw object from a particular point in process]
+
+	try{
+		statements;	//that can throw exception when executed
+		......
+		.....
+	}catch(int& a){
+		......		//catch have reference or pointer
+		instruction through which exception will be handled.
+	}
+
+[note: a try can have multiple catch]
+
+	try{
+		.......(throw int type object)
+		.......(throw string type object)
+	}catch(reference or ponter){
+		.......int throw
+		.......
+	}catch(refernce or pointer){
+		.......string throw
+		.......
+	}
+[note: try can throw only one exception at a time for ex: if try throw first statement then then next throw will never thrown]
+
